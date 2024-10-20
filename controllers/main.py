@@ -18,6 +18,7 @@ class Main(http.Controller):
         students = request.env['hostel.student'].sudo().search([])
         hostels = request.env['hostel.hostel'].sudo().search([('rector', '=', request.env.user.partner_id.id)])
         print("***********************")
+        print(request.env.user.partner_id.name)
         print(hostels)
         hostel_rooms = request.env['hostel.room'].sudo().search([('hostel_id', 'in', hostels.ids)])
         print(hostel_rooms)

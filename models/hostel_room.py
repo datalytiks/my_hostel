@@ -10,6 +10,7 @@ class HostelRoom(models.Model):
     name = fields.Char(string="Room Name", required=True)
     hostel_id = fields.Many2one("hostel.hostel", "Hostel", required=True)
     hostel_name = fields.Char("Hostel Name", compute='_get_hostel_name')
+    category = fields.Integer('Category')
     occupancy = fields.Integer(string='Max Occupancy')
     student_ids = fields.One2many("hostel.student", "room_id", string="Students", help="Enter students")
     current_occupancy = fields.Integer(string='Currently Staying', compute='_compute_current_occupancy')

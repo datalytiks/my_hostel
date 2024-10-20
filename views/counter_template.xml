@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="counter_template" name="Counter Template">
+        <t t-name="my_hostel.Counter_Template">
+            <div>
+                <p>Counter: <t t-esc="state.count"/></p>
+                <button t-on-click="increment">Increment</button>
+            </div>
+        </t>
+    </template>
+</odoo>

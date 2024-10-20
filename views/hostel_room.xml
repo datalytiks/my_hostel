@@ -24,6 +24,7 @@
                             <group>
                                 <field name="name"/>
                                 <field name="hostel_id" required="1"/>
+                                <field name="category" widget="category_color"/>
                             </group>
                             <group>
                                 <field name="occupancy"/>

@@ -23,8 +23,12 @@
                             <h3>
                                 <table>
                                     <tr>
-                                        <td style="padding-right:10px;"><field name="name" required="1" placeholder="Name" /></td>
-                                        <td style="padding-right:10px;"><field name="hostel_code" placeholder="Code" /></td>
+                                        <td style="padding-right:10px;">
+                                            <field name="name" required="1" placeholder="Name" />
+                                        </td>
+                                        <td style="padding-right:10px;">
+                                            <field name="hostel_code" placeholder="Code" />
+                                        </td>
                                     </tr>
                                 </table>
                             </h3>
@@ -39,6 +43,9 @@
                                 <field name="room_ids" />
                             </group>
                         </group>
+                        <!-- <div class="oe_title">
+                            <t t-component="Counter" />
+                        </div> -->
                     </sheet>
                 </form>
             </field>
@@ -58,9 +65,7 @@
 
         <menuitem id="hostel_main_menu" name="Hostel" sequence="1"/>
 
-        <menuitem id="hostel_type_menu" name="Hostel" parent="hostel_main_menu" 
-            action="my_hostel.action_hostel" groups="my_hostel.group_hostel_manager" 
-            sequence="1"/>
+        <menuitem id="hostel_type_menu" name="Hostel" parent="hostel_main_menu" action="my_hostel.action_hostel" groups="my_hostel.group_hostel_manager" sequence="1"/>
 
     </data>
 </odoo>
